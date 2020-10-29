@@ -19,8 +19,8 @@ def predict():
     For rendering results on HTML GUI
     '''
     tv = int(request.form['tv'])
-    radio = int(request.form['tv'])
-    newspaper = int(request.form['tv'])
+    radio = int(request.form['radio'])
+    newspaper = int(request.form['newspaper'])
     data = [[tv, radio,newspaper]]
     my_prediction = classifier.predict(data)
 
