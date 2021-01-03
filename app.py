@@ -22,7 +22,10 @@ def predict():
     radio = int(request.form['radio'])
     newspaper = int(request.form['newspaper'])
     data = [[tv, radio,newspaper]]
-    my_prediction = classifier.predict(data)
+    if (tv == 0 and radio ==0 and newspaper == 0):
+        my_prediction = 0
+    else:
+        my_prediction = classifier.predict(data)
 
     return render_template('index.html', prediction_text='The amount of Sales would be {}'.format(round(my_prediction[0],2)))
 
