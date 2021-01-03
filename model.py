@@ -6,6 +6,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score
 import pickle
 
+# This is a small flask ml web application
+
 #Loading the data
 data = pd.read_csv('advertising.csv')
 
