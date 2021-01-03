@@ -23,7 +23,7 @@ def predict():
     newspaper = int(request.form['newspaper'])
     data = [[tv, radio,newspaper]]
     if (tv == 0 and radio ==0 and newspaper == 0):
-        my_prediction = 0
+        my_prediction = [0]
     else:
         my_prediction = classifier.predict(data)
 
